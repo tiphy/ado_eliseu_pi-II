@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <script>
+        let num;
+        do {
+            num = prompt("digite um numero maior que 10");
+            num = Number(num);
+
+            if (isNaN(num) || num <= 10) {
+                alert("Numero invalido! digite um numero maior que 10 ");
+            }
+        } while (isNaN(num) || num <= 10);
+        alert("voce digitou o numero " + num);
+
+    </script>
+</head>
+
+</html>
