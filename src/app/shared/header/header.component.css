@@ -1,0 +1,101 @@
+/* Importação de fonte básica, opcional */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Cores sugeridas */
+:root {
+    --color-background: #ffffff; /* Fundo principal */
+    --color-header-bg: #f0f8ff; /* Azul Claro para o fundo do cabeçalho */
+    --color-text-dark: #1a1a1a; /* Quase Preto para texto principal */
+    --color-accent-blue: #007bff; /* Um Azul padrão para links e botões */
+    --color-highlight-green: #90ee90; /* Verde Claro para destaque/hover */
+}
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+}
+
+/* --- Estilo do Cabeçalho Principal --- */
+
+.main-header {
+    display: flex; /* Habilita Flexbox */
+    justify-content: space-between; /* Espaça o logo, menu e formulário */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 40px;
+    background-color: var(--color-header-bg); /* Fundo Azul Claro */
+    border-bottom: 2px solid var(--color-highlight-green); /* Detalhe Verde Claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilo do Logotipo --- */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px; /* Ajuste a altura conforme necessário */
+    width: auto;
+}
+
+/* --- Estilo do Menu de Navegação --- */
+
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Alinha os itens do menu horizontalmente */
+    gap: 30px; /* Espaço entre os itens do menu */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-text-dark); /* Texto Quase Preto */
+    font-weight: 700;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a:focus {
+    color: var(--color-accent-blue); /* Texto Azul no hover */
+    background-color: var(--color-highlight-green); /* Fundo Verde Claro no hover */
+    border-radius: 4px;
+}
+
+/* --- Estilo do Formulário de Acesso/Login --- */
+
+.access-form form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.access-form input[type="text"],
+.access-form input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 120px;
+}
+
+.access-form button {
+    padding: 8px 15px;
+    background-color: var(--color-accent-blue); /* Fundo Azul */
+    color: var(--color-background); /* Texto Branco */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.access-form button:hover {
+    background-color: #0056b3; /* Um tom mais escuro de Azul no hover */
+}

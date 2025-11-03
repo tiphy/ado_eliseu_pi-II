@@ -1,0 +1,93 @@
+/* Cores sugeridas (Mantendo o padrão do cabeçalho) */
+:root {
+    --color-background: #ffffff;
+    --color-footer-bg: #f0f8ff; /* Azul Claro para o fundo do rodapé */
+    --color-text-dark: #1a1a1a; /* Quase Preto para texto principal */
+    --color-accent-blue: #007bff; /* Azul padrão para links */
+    --color-highlight-green: #90ee90; /* Verde Claro para destaque/hover */
+    --color-text-light: #555; /* Texto um pouco mais claro para info */
+}
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+}
+
+/* --- Estilo do Rodapé Principal --- */
+
+.main-footer {
+    width: 100%;
+    background-color: var(--color-footer-bg); /* Fundo Azul Claro */
+    color: var(--color-text-dark); /* Texto Quase Preto */
+    padding: 30px 40px 10px; /* Mais padding em cima e nas laterais */
+    border-top: 3px solid var(--color-highlight-green); /* Destaque Verde Claro no topo */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Distribui as colunas */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Garante responsividade em telas menores */
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    gap: 30px;
+}
+
+/* Estilo das Colunas de Informação */
+.footer-info, .footer-contact {
+    min-width: 250px;
+}
+
+.footer-info h3 {
+    color: var(--color-accent-blue); /* Título em Azul */
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    font-size: 0.9em;
+    color: var(--color-text-dark);
+}
+
+.footer-contact h4 {
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed var(--color-highlight-green);
+    padding-bottom: 5px;
+}
+
+/* Estilo dos Links */
+.footer-contact a {
+    text-decoration: none;
+    color: var(--color-text-dark); /* Links em Quase Preto */
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: var(--color-accent-blue); /* Muda para Azul no hover */
+    text-decoration: underline;
+}
+
+/* Estilo de Destaque para o WhatsApp */
+.whatsapp-link {
+    font-weight: bold;
+    color: var(--color-accent-blue); /* Destaque em Azul */
+}
+
+/* --- Linha de Direitos Autorais --- */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ccc; /* Linha divisória */
+    padding-top: 10px;
+    font-size: 0.8em;
+    color: var(--color-text-light); /* Texto um pouco mais claro */
+}

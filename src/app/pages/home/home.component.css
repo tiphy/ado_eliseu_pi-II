@@ -1,0 +1,146 @@
+/* Cores do Mercosul: Azul Ciano (#00B7E4) e Azul Marinho/Escuro (para texto) */
+:root {
+    --color-mercosul-blue-light: #00B7E4; /* Azul Ciano do logo Mercosul */
+    --color-mercosul-blue-dark: #1e3a8a;  /* Azul Marinho/Escuro */
+    --color-text-light: #ffffff;
+    --color-text-dark: #1a1a1a;
+    --color-accent-white: #ffffff;
+}
+
+/* Reset básico (Se o header.css não for carregado) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Adicionar a fonte se necessário */
+}
+
+/* --- Seção Principal (Hero) --- */
+
+.hero-section {
+    position: relative;
+    height: 90vh; /* Ocupa a maior parte da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text-light);
+    
+    /* Ilustração de Carreiras Acadêmicas/Tecnológicas */
+    background-image: linear-gradient(rgba(0, 50, 150, 0.7), rgba(0, 50, 150, 0.7)), 
+                      url('https://source.unsplash.com/random/1600x900/?academic,technology,library'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    
+    /* Cores de Fundo baseado no Mercosul */
+    background-color: var(--color-mercosul-blue-dark);
+}
+
+/* --- Logotipo IICAT Sutil no Fundo --- */
+
+.subtle-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Fica abaixo do conteúdo de texto */
+    pointer-events: none; /* Garante que não interfira no clique */
+}
+
+.logo-fade {
+    width: 400px; /* Tamanho maior */
+    height: auto;
+    opacity: 0.05; /* Torna-o MUITO sutil (quase invisível) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Conteúdo Principal (Texto) --- */
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Fica acima do logotipo sutil */
+    padding: 20px;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--color-accent-white);
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: var(--color-mercosul-blue-light); /* Destaque com o Azul Ciano */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-mercosul-blue-light); /* Azul Ciano de Ação */
+    color: var(--color-text-dark); /* Texto Escuro no botão claro */
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent-white);
+}
+
+/* --- Banner das Bandeiras do Mercosul --- */
+
+.mercosul-banner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutilmente claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+
+.mercosul-banner p {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.flags-container {
+    display: flex;
+    gap: 10px;
+}
+
+.flag {
+    width: 35px; /* Tamanho base */
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    opacity: 0.6; /* Sutil */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Destaque da Bandeira do Mercosul e Brasil */
+.mercosul-flag, .main-flag {
+    width: 45px; /* Maior destaque */
+    opacity: 1; /* Totalmente visível */
+    border: 2px solid var(--color-mercosul-blue-light); /* Borda de destaque */
+    transform: scale(1.1);
+}
+
+.flag:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
